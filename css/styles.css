@@ -1,0 +1,88 @@
+@font-face {
+  font-family: charter;
+  src: url('/fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('/fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('/fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('/fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: 700;
+}
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  /* Colors */
+  --white: #fff;
+  --backgroundGray: #0F0F0F;
+  --backgroundBlack: #070707;
+
+  /* Font */
+  --primaryFont: 'Roboto', system-ui;
+  --secondaryFont: charter, system-ui;
+  --light: 300;
+  --regular: 400;
+  --bold: 700;
+  --headline-headline1: var(--bold) 12rem/normal var(--primaryFont);
+  --headline-headline2: var(--bold) 5.5rem/normal var(--primaryFont);
+
+  /* Spacing */
+  --space-half: .4rem;
+  --space: .8rem;
+  --space-2: 1.6rem;
+  --space-3: 2.4rem;
+  --space-4: 3.2rem;
+  --space-5: 4rem;
+}
+
+body {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--primaryFont);
+  background-color: var(--backgroundGray);
+}
+
+h1 {
+  font: var(--headline-headline1);
+}
+
+p {
+  font: var(--headline-headline2);
+}
+
+.wrapper {
+  max-inline-size: 114rem;
+  margin: 0 auto;
+}
+
+.section-content {
+  block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--space-5) * 2);
+  place-items: center;
+}
